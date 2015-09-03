@@ -8,7 +8,7 @@ from colab_gitlab.tasks import handling_method
 class GitlabPluginAppConfig(ColabPluginAppConfig):
     name = 'colab_gitlab'
     verbose_name = 'Gitlab Plugin'
-    short_name = 'gitlab'
+    short_name = 'colab_gitlab'
 
     signals_list = ['gitlab_create_project']
 
