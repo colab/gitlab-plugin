@@ -1,5 +1,5 @@
 from .views import GitlabProxyView, GitlabProfileProxyView
-from colab.plugins.utils.widget_manager import Widget
+from colab.widgets.widget_manager import Widget
 from django.utils.safestring import mark_safe
 
 
