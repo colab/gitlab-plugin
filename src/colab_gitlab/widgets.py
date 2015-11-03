@@ -26,7 +26,8 @@ class GitlabProfileWidget(GitlabProxyView, Widget):
 
         if r.status_code == 302:
             location = r.get('Location')
-            requested_url = location[location.find('/{}/'.format(self.app_label)):]
+            requested_url = \
+                location[location.find('/{}/'.format(self.app_label)):]
             request.method = 'GET'
             r = g.dispatch(request, requested_url)
 

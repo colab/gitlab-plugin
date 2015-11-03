@@ -1,4 +1,5 @@
-import os, sys
+import os
+import sys
 from colab.plugins.views import ColabProxyView
 
 
