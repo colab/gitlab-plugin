@@ -7,6 +7,6 @@ from .views import GitlabProxyView
 urlpatterns = patterns(
     '',
     # Gitlab URLs
-    url(r'^profile$', permission_denied),
+    url(r'^profile$', permission_denied, name='gitlab_profile'),
     url(r'^(?P<path>.*)$', GitlabProxyView.as_view(), name='gitlab'),
 )
