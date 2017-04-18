@@ -1,5 +1,5 @@
-"""
-Test User class.
+"""Test User class.
+
 Objective: Test parameters, and behavior.
 """
 
@@ -31,6 +31,10 @@ class GitlabTest(TestCase):
     def test_project_url(self):
         self.assertEqual(GitlabProject.objects.get(id=1).url,
                          '/gitlab/softwarepublico/colab')
+
+    def test_blacklist(self):
+        response = self.client.get('/gitlab/profile')
+        self.assertEqual(403, response.status_code)
 
     def test_project_group(self):
         project = GitlabProject.objects.get(id=1)
